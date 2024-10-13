@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #2c4861;
+  padding: 15px 0;
+  color: white;
+  text-align: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.main-article {
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.image-container {
+  width: 100%;
+  height: 400px; /* Altezza fissa del contenitore */
+  background-color: #2c4861; /* Colore di sfondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Nasconde eventuali ritagli */
+}
+
+.cover-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Mantiene l'immagine intera, anche se più piccola */
+}
+
+/* Stili per la barra superiore */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2b4f6a;
+  padding: 10px;
+  color: #fff;
+}
+
+.social-links a {
+  color: #fff;
+  margin-right: 15px;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #ddd;
+}
+
+.top-bar-right {
+  font-size: 0.9em;
+}
+
+/* Barra secondaria */
+.secondary-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #375c7e;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.secondary-bar-links a {
+  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.secondary-bar-links a:hover {
+  color: #ddd;
+}
+
+.search-bar i {
+  color: #fff;
+  font-size: 1.2em;
+}
+
+/* Stili della navigazione */
+.navbar {
+  background-color: #fff;
+  padding: 15px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h1 {
+  font-family: 'Georgia', serif;
+  font-size: 2em;
+  color: #2b4f6a;
+}
+
+.navbar nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.navbar nav ul li {
+  margin-right: 20px;
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #2b4f6a;
+}
+
+.navbar nav ul li a:hover {
+  color: #2b4f6a;
+}
+
+.headline-overlay {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px;
+}
+
+.headline-overlay h2 {
+  font-size: 2rem;
+}
+
+.headline-overlay p {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.additional-articles {
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.article {
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+}
+
+.article p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+footer {
+  background-color: #2c4861;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+}

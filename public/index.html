@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Gazzetta del Mezzogiorno - Notizie</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome per le icone -->
+</head>
+<body>
+
+  <!-- Barra superiore con social, data e orario -->
+  <div class="top-bar">
+    <div class="social-links">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+      <a href="#"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="top-bar-right">
+      <span id="current-date-time">Domenica 13 ottobre 1984 | 20:15</span> <!-- Placeholder iniziale -->
+    </div>
+  </div>
+
+  <!-- Barra secondaria con abbonamento e altre opzioni -->
+  <div class="secondary-bar">
+    <div class="secondary-bar-links">
+      <a href="#">ABBONATI</a>
+      <a href="#">EDICOLA</a>
+      <a href="#">PUBBLICITÀ</a>
+    </div>
+    <div class="search-bar">
+      <i class="fas fa-search"></i> <!-- Icona di ricerca -->
+    </div>
+  </div>
+
+  <!-- Header con navigazione principale -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <h1>LA GAZZETTA DEL MEZZOGIORNO</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">BARI</a></li>
+          <li><a href="#">BAT</a></li>
+          <li><a href="#">TARANTO</a></li>
+          <li><a href="#">FOGGIA</a></li>
+          <li><a href="#">LECCE</a></li>
+          <li><a href="#">BRINDISI</a></li>
+          <li><a href="#">POTENZA</a></li>
+          <li><a href="#">MATERA</a></li>
+          <li><a href="#">INCHIESTE</a></li>
+          <li><a href="#">CULTURA</a></li>
+          <li><a href="#">SPORT</a></li>
+          <li><a href="#">VIDEO</a></li>
+          <li><a href="#">FOTO</a></li>
+          <li><a href="#">SPECIALI</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sezione principale con immagine e titolo -->
+  <section class="main-article">
+    <div class="image-container">
+      <img src="killer-cover.jpeg" alt="Foto copertina killer a piede libero" class="cover-image">
+    </div>
+    <div class="headline-overlay">
+      <h2>Killer a piede libero: la città sotto shock</h2>
+      <p>La polizia alla ricerca del killer, la popolazione è in allarme. Ecco gli ultimi sviluppi.</p>
+    </div>
+  </section>
+
+  <!-- Sezione articoli aggiuntivi -->
+  <section class="additional-articles">
+    <div class="article-grid">
+      <div class="article">
+        <img src="image1.jpg" alt="Aggiornamenti investigativi">
+        <p>Aggiornamenti investigativi: le autorità si mobilitano</p>
+      </div>
+      <div class="article">
+        <img src="image2.jpg" alt="Reazioni della popolazione">
+        <p>La popolazione sotto shock: paura nelle strade</p>
+      </div>
+      <div class="article">
+        <img src="image3.jpg" alt="Sospetto in fuga">
+        <p>Il sospetto in fuga: si stringe il cerchio</p>
+      </div>
+      <div class="article">
+        <img src="image4.jpg" alt="Comunicati della polizia">
+        <p>Le parole della polizia: "Collaborate con le autorità"</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 La Gazzetta del Mezzogiorno. Tutti i diritti riservati.</p>
+  </footer>
+
+  <!-- Script per aggiornare l'orario dinamico con anno fisso al 1984 -->
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      
+      // Manteniamo l'anno al 1984
+      const year = 1984;
+      
+      // Otteniamo mese, giorno, ore e minuti attuali
+      const months = ["Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre"];
+      const days = ["Domenica", "Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato"];
+      
+      const dayOfWeek = days[now.getDay()];
+      const day = now.getDate();
+      const month = months[now.getMonth()];
+      
+      let hours = now.getHours();
+      let minutes = now.getMinutes();
+      
+      // Aggiungere uno zero ai minuti se è un numero singolo
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      
+      // Format finale: "Domenica 13 ottobre 1984 | 20:15"
+      const formattedTime = `${dayOfWeek} ${day} ${month} ${year} | ${hours}:${minutes}`;
+      
+      // Aggiorniamo il contenuto dello span con l'id "current-date-time"
+      document.getElementById('current-date-time').textContent = formattedTime;
+    }
+
+    // Aggiorniamo subito e poi ogni minuto
+    updateDateTime();
+    setInterval(updateDateTime, 60000);
+  </script>
+
+</body>
+</html>
